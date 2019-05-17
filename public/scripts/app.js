@@ -48,9 +48,6 @@ var user = {
     age: '25',
     location: 'Texas'
 };
-var userName = 'Matheus';
-var userAge = 25;
-var userLocation = 'Location: Curitiba';
 
 function getlocation(location) {
     if (location) {
