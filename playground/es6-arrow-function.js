@@ -1,5 +1,3 @@
-'use strict';
-
 // function square(x, y){
 //     return x * x;
 // };
@@ -21,4 +19,4 @@
 
 // const getFirstName = (name) => name.split(' ')[0];
 
-console.log(getFirstName('Matheus Binotto'));
+console.log(getFirstName('Matheus Binotto'))
