@@ -24,6 +24,8 @@ const onRemoveAll = () => {
     render()
 }
 
+
+
 const render = () => {
     //JSX - Javascript XML
     const template =( 
@@ -33,9 +35,11 @@ const render = () => {
             <p>{app.options.length > 0 ? 'Here are you options:' : 'No Options'}</p>
             <p>{app.options.length}</p>
             <button onClick={onRemoveAll}>Remove All Options</button>
+    
             <ol>
-                <li>Item one</li>
-                <li>Item two</li>
+                {
+                    app.options.map((option) => <li key={option}>Item: {option}</li>)
+                }
             </ol>
             <form onSubmit={onFormSubmit}>
                 <input type="text" name="option"/>
