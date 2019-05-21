@@ -28,6 +28,19 @@ class Counter extends React.Component{
                 count: 0
             };
         });
+        this.setState((prevState) => {
+            return {
+                count: prevState + 1
+            };
+        });
+
+        //Second Alternative\/ - Uses the above alternative /\ is more efficient
+        // this.setState({
+        //     count: 0
+        // })
+        // this.setState({
+        //     count: this.state.count + 1 
+        // })
     }
     render(){
         return (
