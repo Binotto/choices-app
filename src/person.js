@@ -3,5 +3,6 @@
 //////////////////////////////////////////////
 const canDrink = (age) => age >= 18;
 const isAdult = (age) => age >= 21;
+const isSeniorCitizen = (age) => age >= 65;
 
-export{ canDrink, isAdult};
+export{ canDrink, isAdult, isSeniorCitizen as default};
