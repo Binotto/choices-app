@@ -9,3 +9,5 @@ module.exports = {
         filename: 'bundle.js'
     }
 }
+
+//loader
