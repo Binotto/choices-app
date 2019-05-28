@@ -4,6 +4,6 @@
         "react"
     ],
     "plugins": [
-        "Transform-class-properties"
+        "transform-class-properties"
     ]
 }
