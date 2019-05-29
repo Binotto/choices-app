@@ -13,15 +13,11 @@ const Layout = (props) => {
     );
 }
 
-const template = (
+ReactDOM.render((
+    <Layout>
     <div>
         <div>Title</div>
         <p>This is my page</p>
     </div>
-);
-
-ReactDOM.render((
-    <Layout>
-        <p>This is inline</p>
     </Layout>
 ), document.getElementById('app'))
