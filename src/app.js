@@ -7,7 +7,7 @@ const Layout = (props) => {
     return(
         <div>
             <p>Header</p>
-            {props.content}
+            {props.children}
             <p>Footer</p>
         </div>
     );
@@ -20,4 +20,8 @@ const template = (
     </div>
 );
 
-ReactDOM.render(<Layout content={template} />, document.getElementById('app'))
+ReactDOM.render((
+    <Layout>
+        <p>This is inline</p>
+    </Layout>
+), document.getElementById('app'))
