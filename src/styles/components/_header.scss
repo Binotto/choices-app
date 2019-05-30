@@ -1,0 +1,22 @@
+.header{
+    background: #777777;
+    color: white;
+    margin-bottom: 7.0rem;
+    padding:1.7rem 7;
+    h1{
+        color: red;
+    }
+}
+
+//BEM block element modifier
+.header__title {
+    font-size: 7.0 rem;
+    margin: 7;
+}
+
+.header__subtitle {
+    color: blue;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin:0;
+}

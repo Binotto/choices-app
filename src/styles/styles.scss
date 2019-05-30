@@ -1,5 +1,4 @@
-$brand-color: green;
+@import './base/base';
+@import './components/header';
 
-*{
-    color: $brand-color;
-}
+
