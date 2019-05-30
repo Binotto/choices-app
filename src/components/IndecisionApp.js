@@ -4,6 +4,7 @@ import Header from './Header';
 import Action from './Action';
 import Options from './Options';
 import OptionModal from './OptionModal';
+import Footer from './Footer';
 
 
 export default class IndecisionApp extends React.Component {
@@ -64,6 +65,7 @@ export default class IndecisionApp extends React.Component {
     }
     render() {
         const subtitle = 'Put your life in the hands of a computer!';
+        const subtitle_footer = 'View Code on GitHub';
         return (
             <div>
                 <Header subtitle={subtitle} />
@@ -87,6 +89,7 @@ export default class IndecisionApp extends React.Component {
                     selectedOption={this.state.selectedOption}
                     handleCloseModal={this.handleCloseModal}
                 />
+                <Footer subtitle_footer={subtitle_footer}/>
             </div>
         );
     }
