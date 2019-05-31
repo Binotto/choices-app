@@ -1,4 +1,5 @@
 .header{
+    text-align: center;
     background: $off-black;
     color: $off-white;
     margin-bottom: $x1-size;
@@ -16,4 +17,10 @@
     font-size: 1.6rem;
     font-weight: 500;
     margin:0;
+}
+
+@media(min-width: $desktop-breakpoint) {
+    .header{
+        margin-bottom: $x1-size;
+    }
 }

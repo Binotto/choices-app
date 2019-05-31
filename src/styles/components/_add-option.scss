@@ -1,5 +1,6 @@
 .add-option{
     display: flex;
+    flex-direction: column;
     padding: $m-size;
 }
 .add-option-error {
@@ -15,6 +16,17 @@
     color: $snow;
     border-bottom: .3rem solid darken($dark-blue, 22%);
     flex-grow: 1;
-    margin-right: $l-size;
+    margin:0 0 $l-size 0;
+    //margin-right: $l-size;
     padding: $s-size;
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .add-option{
+        flex-direction: row;
+    }
+
+    .add-option__input{
+        margin: 0 $s-size 0 0;
+    }
 }
