@@ -2,7 +2,7 @@ const path = require('path')
 // entry -> output
 
 module.exports = (env) => {
-    console.log('env', env);
+    const isProduction = env === 'production';
     return {
         mode: 'production',
         entry: './src/app.js',
@@ -24,7 +24,7 @@ module.exports = (env) => {
                 ]
             }]
         },
-        devtool: 'cheap-module-eval-source-map',
+        devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
         devServer: {
             contentBase:path.join(__dirname, 'public/')
         }
