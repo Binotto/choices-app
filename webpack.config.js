@@ -12,7 +12,7 @@ module.exports = (env) => {
             filename: 'bundle.js'
         },
         plugins:[
-            new ExtractTextPlugin('styles.css'),
+            new ExtractTextPlugin('main.css'),
         ],
         module: {
             rules: [{
@@ -24,12 +24,22 @@ module.exports = (env) => {
                 use: [{
                     loader: ExtractTextPlugin.loader,
                 },
-                'css-loader',
-                'sass-loader',
+                {
+                    loader: 'css-loader',
+                    options: {
+                        sourceMap: true,
+                    }
+                },
+                {
+                    loader:'sass-loader',
+                    options: {
+                        sourceMap: true,
+                    }
+                },
             ],
             }]
         },
-        devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
+        devtool: isProduction ? 'source-map' : 'inline-source-map',
         devServer: {
             contentBase:path.join(__dirname, 'public/')
         }
