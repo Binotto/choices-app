@@ -1,4 +1,5 @@
-const path = require('path')
+const path = require('path');
+const ExtractTextPlugin = require('mini-css-extract-plugin')
 // entry -> output
 
 module.exports = (env) => {
@@ -10,6 +11,9 @@ module.exports = (env) => {
             path: path.join(__dirname, 'public/'),
             filename: 'bundle.js'
         },
+        plugins:[
+            new ExtractTextPlugin('styles.css'),
+        ],
         module: {
             rules: [{
                 loader: 'babel-loader',
@@ -17,11 +21,12 @@ module.exports = (env) => {
                 exclude: /node_modules/
             }, {
                 test:/\.s?css$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'sass-loader'
-                ]
+                use: [{
+                    loader: ExtractTextPlugin.loader,
+                },
+                'css-loader',
+                'sass-loader',
+            ],
             }]
         },
         devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
