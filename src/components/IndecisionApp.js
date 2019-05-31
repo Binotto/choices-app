@@ -67,7 +67,7 @@ export default class IndecisionApp extends React.Component {
         const subtitle = 'Put your life in the hands of a computer!';
         const subtitle_footer = {
             github: 'View Code on GitHub',
-            linkedin: 'Linkedin'
+            linkedin: 'My Linkedin'
         };
         return (
             <div>
